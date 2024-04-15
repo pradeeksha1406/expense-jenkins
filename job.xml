@@ -27,7 +27,7 @@
     <concurrentBuild>false</concurrentBuild>
     <builders>
         <hudson.tasks.Shell>
-            <command></command>
+             <command></command>
             <configuredLocalRules/>
         </hudson.tasks.Shell>
     </builders>
