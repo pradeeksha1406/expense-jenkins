@@ -1,38 +1,14 @@
 <?xml version='1.1' encoding='UTF-8'?>
-<flow-definition plugin="workflow-job@1348.v32a_a_f150910e">
-    <actions/>
+<flow-definition plugin="workflow-job@1400.v7fd111b_ec82f">
     <description></description>
     <keepDependencies>false</keepDependencies>
-    {% if auto_trigger == "true" %}
-    <properties>
-        <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
-            <triggers>
-                <org.jenkinsci.plugins.gwt.GenericTrigger plugin="generic-webhook-trigger@1.87.0">
-                    <spec></spec>
-                    <regexpFilterText></regexpFilterText>
-                    <regexpFilterExpression></regexpFilterExpression>
-                    <printPostContent>false</printPostContent>
-                    <printContributedVariables>false</printContributedVariables>
-                    <causeString>Generic Cause</causeString>
-                    <token>{{repo_name}}</token>
-                    <tokenCredentialId></tokenCredentialId>
-                    <silentResponse>false</silentResponse>
-                    <overrideQuietPeriod>false</overrideQuietPeriod>
-                    <shouldNotFlattern>false</shouldNotFlattern>
-                    <allowSeveralTriggersPerBuild>false</allowSeveralTriggersPerBuild>
-                </org.jenkinsci.plugins.gwt.GenericTrigger>
-            </triggers>
-        </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
-    </properties>
-    {% else %}
     <properties/>
-    {% endif %}
-    <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@3802.vd42b_fcf00b_a_c">
-        <scm class="hudson.plugins.git.GitSCM" plugin="git@5.2.0">
+    <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@3894.vd0f0248b_a_fc4">
+        <scm class="hudson.plugins.git.GitSCM" plugin="git@5.2.1">
             <configVersion>2</configVersion>
             <userRemoteConfigs>
                 <hudson.plugins.git.UserRemoteConfig>
-                    <url>https://github.com/raghudevopsb75/{{repo_name}}</url>
+                    <url>https://github.com/pradeeksha1406/{{repo_name}}</url>
                 </hudson.plugins.git.UserRemoteConfig>
             </userRemoteConfigs>
             <branches>
@@ -44,7 +20,7 @@
             <submoduleCfg class="empty-list"/>
             <extensions/>
         </scm>
-        <scriptPath>{{file_name}}</scriptPath>
+        <scriptPath>Jenkinsfile</scriptPath>
         <lightweight>true</lightweight>
     </definition>
     <triggers/>
