@@ -32,7 +32,7 @@
             </triggers>
         </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
     </properties>
-    { % else }
+    { % else % }
     <properties/>
     <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@3894.vd0f0248b_a_fc4">
         <scm class="hudson.plugins.git.GitSCM" plugin="git@5.2.1">
