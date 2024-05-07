@@ -17,7 +17,7 @@
 
     - name: Create Jenkins Job - Frontend
       community.general.jenkins_job:
-          config: "{{ lookup('template', 'job.xml') }}"
+          config: "{{ lookup('template', 'mjob.xml') }}"
           name: frontend
           password: "{{jenkins_password}}"
           url: "{{jenkins_url}}"
@@ -28,7 +28,7 @@
 
     - name: Create Jenkins Job - backend
       community.general.jenkins_job:
-        config: "{{ lookup('template', 'job.xml') }}"
+        config: "{{ lookup('template', 'mjob.xml') }}"
         name: backend
         password: "{{jenkins_password}}"
         url: "{{jenkins_url}}"
